@@ -1,0 +1,202 @@
+[
+    {
+        "name": "John Doe",
+        "subject": "Mathematics",
+        "class": "JSS1",
+        "email": "john.doe@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-11.svg",
+        "age": 35,
+        "about": "John Doe is an experienced Mathematics teacher with a passion for problem-solving. With over 10 years of teaching experience, he believes in making mathematical concepts accessible and fun. He uses innovative teaching methods such as gamification and real-world applications to engage his students and help them understand the value of math in everyday life. John is committed to fostering a classroom environment where every student can develop a love for numbers and problem-solving."
+    },
+    {
+        "name": "Jane Smith",
+        "subject": "English",
+        "class": "JSS2",
+        "email": "jane.smith@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14.svg",
+        "age": 29,
+        "about": "Jane Smith is a passionate English teacher who specializes in creative writing, poetry, and literature. She encourages her students to explore their creative abilities through writing, reading, and critical thinking. Jane believes that literature provides a window into different cultures and perspectives, and she strives to help her students develop a deep appreciation for storytelling. Outside the classroom, she enjoys writing her own novels and poetry, often sharing her work with her students to inspire them."
+    },
+    {
+        "name": "Michael Johnson",
+        "subject": "Biology",
+        "class": "SS1",
+        "email": "michael.johnson@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-1.svg",
+        "age": 42,
+        "about": "Michael Johnson is a dedicated Biology teacher with a deep love for the natural world. With a background in environmental science, he focuses on teaching students about the interconnectedness of life and the importance of sustainability. He incorporates field trips, experiments, and hands-on activities to engage students and deepen their understanding of biology. Michael is passionate about fostering scientific curiosity and encouraging students to ask questions and explore the natural world around them."
+    },
+    {
+        "name": "Emily Davis",
+        "subject": "Chemistry",
+        "class": "SS2",
+        "email": "emily.davis@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-2.svg",
+        "age": 37,
+        "about": "Emily Davis is an enthusiastic Chemistry teacher with a flair for making complex concepts simple and exciting. Her interactive lessons involve experiments that allow students to explore chemical reactions and the science behind everyday phenomena. Emily believes that Chemistry is the foundation of many scientific fields, and she works hard to inspire her students to appreciate its relevance to the world around them. Outside the classroom, Emily enjoys reading scientific journals and attending chemistry-related conferences to stay updated on the latest research."
+    },
+    {
+        "name": "Richard Lee",
+        "subject": "Physics",
+        "class": "SS3",
+        "email": "richard.lee@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-3.svg",
+        "age": 40,
+        "about": "Richard Lee is a Physics teacher who specializes in mechanics, electromagnetism, and astrophysics. With over 15 years of teaching experience, Richard is known for his ability to make abstract concepts in Physics more understandable through real-life examples and hands-on experiments. He encourages his students to think critically and question how things work in the physical world. Outside the classroom, Richard is an avid astronomy enthusiast and enjoys stargazing and observing celestial events with his students."
+    },
+    {
+        "name": "Susan Taylor",
+        "subject": "History",
+        "class": "JSS3",
+        "email": "susan.taylor@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-4.svg",
+        "age": 33,
+        "about": "Susan Taylor is a passionate History teacher with a focus on global history, civilizations, and significant historical events. She believes that understanding history helps students understand the present and make informed decisions about the future. Susan uses a variety of teaching methods, including multimedia presentations, field trips, and historical reenactments, to bring history to life. She encourages students to think critically about historical events and explore different perspectives."
+    },
+    {
+        "name": "David Brown",
+        "subject": "Geography",
+        "class": "JSS1",
+        "email": "david.brown@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-5.svg",
+        "age": 31,
+        "about": "David Brown is an engaging Geography teacher who specializes in physical geography, climate change, and urban studies. He uses interactive maps, data analysis, and virtual tours to help his students understand the world’s landscapes, resources, and challenges. David believes in the importance of global citizenship and teaches his students about the impact of geography on daily life, encouraging them to become informed and responsible global citizens."
+    },
+    {
+        "name": "Laura Wilson",
+        "subject": "Economics",
+        "class": "SS1",
+        "email": "laura.wilson@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-6.svg",
+        "age": 28,
+        "about": "Laura Wilson is a passionate Economics teacher who brings real-world economic issues into the classroom. She covers topics such as supply and demand, inflation, and economic policy, helping her students understand how economic principles affect their lives. Laura encourages her students to think critically about the economy and its global impact. She also emphasizes the importance of financial literacy and personal finance, teaching her students how to make informed financial decisions."
+    },
+    {
+        "name": "James Moore",
+        "subject": "Computer Science",
+        "class": "JSS2",
+        "email": "james.moore@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-7.svg",
+        "age": 34,
+        "about": "James Moore is a tech-savvy Computer Science teacher who loves to teach coding, algorithm design, and software development. He believes that programming is a valuable skill in today’s digital world, and he works to make coding approachable for students of all skill levels. James incorporates interactive coding exercises, group projects, and hackathons into his lessons to keep students engaged. He is also passionate about the ethical implications of technology and encourages his students to consider the social impact of the tech they create."
+    },
+    {
+        "name": "Olivia White",
+        "subject": "Literature",
+        "class": "SS3",
+        "email": "olivia.white@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-8.svg",
+        "age": 27,
+        "about": "Olivia White is a Literature teacher who specializes in poetry, drama, and contemporary fiction. She has a strong passion for the written word and works tirelessly to instill a love for reading in her students. Olivia’s classroom is filled with discussions about literary themes, character development, and narrative techniques. She encourages her students to not only read but also write and express their thoughts creatively through storytelling. Outside of school, Olivia writes short stories and contributes to literary journals."
+    },
+    {
+        "name": "Ethan Clark",
+        "subject": "French",
+        "class": "JSS1",
+        "email": "ethan.clark@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-9.svg",
+        "age": 30,
+        "about": "Ethan Clark is a French teacher who loves to immerse students in both the language and culture of France. He focuses on conversation skills, grammar, and pronunciation while also incorporating aspects of French history, music, and film. Ethan believes in learning through immersion and encourages his students to practice French outside the classroom. He enjoys organizing cultural events like French film screenings and cooking classes to give his students a taste of French culture."
+    },
+    {
+        "name": "Sophia Harris",
+        "subject": "Fine Arts",
+        "class": "JSS3",
+        "email": "sophia.harris@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-10.svg",
+        "age": 36,
+        "about": "Sophia Harris is an enthusiastic Fine Arts teacher who specializes in painting, drawing, and digital arts. She believes that art is a powerful form of expression and strives to help students find their unique artistic voice. Sophia’s lessons focus on developing both technical skills and creative thinking. She encourages students to explore different media, from watercolors to digital painting, and regularly organizes art exhibitions to showcase students’ work. Outside the classroom, Sophia works as a freelance artist and participates in local art shows."
+    },
+    {
+        "name": "Liam Walker",
+        "subject": "Music",
+        "class": "JSS2",
+        "email": "liam.walker@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-11.svg",
+        "age": 32,
+        "about": "Liam Walker is a talented Music teacher who specializes in vocal and instrumental training. He enjoys teaching students of all musical backgrounds, from beginners to advanced musicians. Liam integrates music theory with practical music lessons and helps students develop their skills through performance. He encourages students to form bands, participate in music festivals, and compose their own music. Outside of school, Liam performs as a lead singer in a local band and records his own music."
+    },
+    {
+        "name": "Charlotte Robinson",
+        "subject": "Agricultural Science",
+        "class": "SS2",
+        "email": "charlotte.robinson@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14.svg",
+        "age": 38,
+        "about": "Charlotte Robinson is a passionate Agricultural Science teacher who emphasizes sustainable farming practices, animal husbandry, and crop cultivation. She believes that agricultural knowledge is essential for a sustainable future and encourages her students to pursue careers in agriculture. Charlotte incorporates hands-on learning through gardening projects and farm visits to give students practical experience. She is also involved in local environmental advocacy and helps students understand the relationship between agriculture and environmental conservation."
+    },
+    {
+        "name": "Noah Martin",
+        "subject": "Civic Education",
+        "class": "SS3",
+        "email": "noah.martin@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-1.svg",
+        "age": 39,
+        "about": "Noah Martin is a dedicated Civic Education teacher who strives to educate students on the importance of citizenship, democracy, and social responsibility. He encourages his students to be active participants in their communities and to understand their rights and responsibilities as citizens. Noah’s lessons often focus on current social and political issues, helping students develop critical thinking and informed opinions. Outside of school, Noah participates in local civic engagement programs and works as a community organizer."
+    },
+    {
+        "name": "Anna King",
+        "subject": "Spanish",
+        "class": "JSS3",
+        "email": "anna.king@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-11.svg",
+        "age": 29,
+        "about": "Anna King is an energetic Spanish teacher who immerses her students in both the language and culture of Spanish-speaking countries. She incorporates diverse teaching methods, such as games, conversation practice, and music, to keep her students engaged and motivated. Anna encourages her students to not only learn the language but also appreciate the cultural diversity found in the Spanish-speaking world."
+    },
+    {
+        "name": "Ryan White",
+        "subject": "Physical Education",
+        "class": "JSS2",
+        "email": "ryan.white@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14.svg",
+        "age": 34,
+        "about": "Ryan White is a Physical Education teacher who believes in the importance of fitness and teamwork. He strives to make every student feel confident in their physical abilities, offering a variety of sports and activities for all skill levels. Ryan encourages students to adopt a healthy lifestyle through regular exercise and teamwork. Outside of school, Ryan is a competitive athlete and coach."
+    },
+    {
+        "name": "Grace Adams",
+        "subject": "Drama",
+        "class": "JSS1",
+        "email": "grace.adams@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-10.svg",
+        "age": 33,
+        "about": "Grace Adams is a passionate Drama teacher who specializes in theater arts, acting, and directing. She loves to encourage students to develop confidence through performance and creative expression. Grace believes that drama helps students develop empathy, teamwork, and communication skills. Her classroom is always full of energy, with rehearsals for school plays and drama competitions."
+    },
+    {
+        "name": "Michael Harris",
+        "subject": "Religious Studies",
+        "class": "SS3",
+        "email": "michael.harris@example.com",
+        "gender": "Male",
+        "avatar": "./image/svg/Ellipse 14-9.svg",
+        "age": 45,
+        "about": "Michael Harris is a Religious Studies teacher who is dedicated to helping students explore the values and teachings of various world religions. His lessons aim to foster tolerance, understanding, and respect for different belief systems. Michael encourages his students to question and reflect on the role of religion in contemporary society."
+    },
+    {
+        "name": "Samantha Turner",
+        "subject": "Social Studies",
+        "class": "SS2",
+        "email": "samantha.turner@example.com",
+        "gender": "Female",
+        "avatar": "./image/svg/Ellipse 14-2.svg",
+        "age": 32,
+        "about": "Samantha Turner is a Social Studies teacher who strives to teach students about the complexities of society, politics, and economics. She encourages her students to think critically about the world and become engaged, responsible citizens. Samantha uses real-world examples, case studies, and debates to help her students understand the broader implications of the topics they discuss."
+    }
+]

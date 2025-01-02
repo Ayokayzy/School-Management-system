@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link type="image/png" rel="icon" href="./image/Ellipse 6.png" />
+    <link rel="stylesheet" href="./style/layout.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/suport.css">
+    <link rel="stylesheet" href="./style/all-student.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="grid-layout">
+      <section class="header grid-item">
+        <header class="logout">
+          <div class="notification"></div>
+          <div class="login">
+            <button><a href="#">Log out</a></button>
+          </div>
+        </header>
+      </section>
+
+      <section class="side-nav grid-item" id="side"></section>
+
+      <section class="content grid-item">
+        <div class="tnav">
+                <div class="btn">
+                    <button><a href="#">Export CSV</a></button>
+                    <button><a href="./add-teacher.html">Add Teachers</a></button>
+                </div>
+
+        </div>
+        
+        <div class="tplist">
+
+        <div class="tlist">
+
+          <div class="tsearch">
+            <select name="class" id="select" value="addd">
+              <option value="" disabled selected>Choose class</option>
+                <option value="All class">All Class</option>
+                <option value="jss 1">Jss1</option>
+                <option value="jss 2">Jss2</option>
+                <option value="jss 3">Jss3</option>
+                <option value="ss 1">Ss1</option>
+                <option value="ss 2">Ss2</option>
+                <option value="ss 3">Ss3</option>
+            </select>
+            <input type="text" id="search"
+            placeholder="Search for a student by name or email">
+            
+
+        </div>
+
+          <table  class="tdata">
+            <thead >
+              <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                
+                <th>Email address</th>
+                <th width="150px">Class</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>s001</td>
+                <td> <img src="./image/svg/Ellipse 14-1.svg" alt=""> Marvin Cooper</td>
+             
+             
+                <td>marvincooper@gmail.com</td>
+                   <td>SS2</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td>s003</td>
+
+                <td><img src="./image/svg/Ellipse 14.svg" alt=""> Cooper clev</td>
+               
+                <td>cooperclev@gmail.com</td>
+                <td>SS1</td>
+                
+                <td>Female</td>
+              </tr> -->
+            </tbody>
+
+          </table>
+        </div>
+
+
+        <div class="sprofile">
+          <!-- <div class="noinfo">
+          
+          </div> -->
+              <div class="profilpic">
+                <h3 class="id"></h3>
+                <img class="prof" src="./image/ssvg/Ellipse 14-1.svg"
+                 alt="">
+                 <h3 class="name">Cody Fisher</h3>
+                 <p class="p"><span class="class">Science</span> Student</p>
+                 <img src="" alt="">
+
+                 <div class="icon">
+                  <img src="./image/outline/Frame 30085.png" alt="" />
+                  <img src="./image/outline/Frame 30086.png" alt="" />
+                  <img src="./image/outline/Frame 30087.png" alt="" />
+                </div>
+
+               
+                     <div class="about">
+                    <h4 class="h4">About</h4>
+                    <p class="aboutinfo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex ratione iste iure harum quidem!</p>
+      
+                    <div class="info">
+                      <div class="age">
+                        <h4>Age</h4>
+                        <p class="ag">22</p>
+                      </div>
+      
+                      <div class="gender">
+                        <h4>Gender</h4>
+                        <p class="gen">female</p>
+                      </div>
+                    </div>
+          
+      
+                  <div class="others">
+                    <h4>people from the same class</h4>
+      
+                    <div class="othersimg">
+                      <img src="./image/ssvg/Ellipse 14-2.svg" alt="" />
+                      <img src="./image/ssvg/Ellipse 14-6.svg" alt="" />
+      
+                      <img src="./image/ssvg/Ellipse 14.svg" alt="" />
+                      <img src="./image/ssvg/Ellipse 14-10.svg" alt="" />
+      
+                      <a href="./all-teachers.html">+12 more</a>
+                    </div>
+                  </div>
+                </div>
+
+
+    
+        </div>
+
+
+
+        </div>
+       
+      
+
+        
+     
+    
+      </section>
+
+    </div>
+
+
+
+
+    <script>
+      // selecting the section to load  toload the navbar in
+      $(".side-nav").load("sidenav-bar.html");
+    </script>
+
+    <script src="./script/active.js"></script>
+    <script type="module" src="./script/loadstudent.js"></script>
+  </body>
+</html>

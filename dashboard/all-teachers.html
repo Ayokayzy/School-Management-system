@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Teacher</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link type="image/png" rel="icon" href="./image/Ellipse 6.png" />
+    <link rel="stylesheet" href="./style/layout.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/suport.css">
+    <link rel="stylesheet" href="./style/all-teacher.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="grid-layout">
+      <section class="header grid-item">
+        <header class="logout">
+          <div class="notification"></div>
+          <div class="login">
+            <button><a href="#">Log out</a></button>
+          </div>
+        </header>
+      </section>
+
+      <section class="side-nav grid-item" id="side"></section>
+
+      <section class="content grid-item">
+        <div class="tnav">
+            <h4>Teachers</h4>
+                <div class="btn">
+                    <button><a href="#">Export CSV</a></button>
+                    <button><a href="./add-teacher.html">Add Teachers</a></button>
+                </div>
+
+        </div>
+        <div class="tsearch">
+            <select name="class" id="select" value="addd">
+              <option value="" disabled selected>Choose class</option>
+                <option value="All class">All Class</option>
+                <option value="jss1">Jss1</option>
+                <option value="jss2">Jss2</option>
+                <option value="jss3">Jss3</option>
+                <option value="ss1">Ss1</option>
+                <option value="ss2">Ss2</option>
+                <option value="ss3">Ss3</option>
+            </select>
+            <input type="text" id="search"
+            placeholder="Search for a teacher by name or email">
+            
+
+        </div>
+        <div class="tlist">
+          <table  class="tdata">
+            <thead >
+              <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th width="150px">Class</th>
+                <th>Email address</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td> <img src="./image/svg/Ellipse 14-1.svg" alt=""> Marvin Cooper</td>
+                <td>data processing</td>
+                <td>SS2</td>
+                <td>marvincooper@gmail.com</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+
+                <td><img src="./image/svg/Ellipse 14.svg" alt=""> Cooper clev</td>
+                <td>Agric science</td>
+                <td>SS1</td>
+                <td>cooperclev@gmail.com</td>
+                <td>Female</td>
+              </tr> -->
+            </tbody>
+
+          </table>
+
+
+            
+
+        </div>
+       
+        <!-- suport system -->
+
+        <!-- <div class="support">
+          <img src="./image/bx_support.png" alt="" />
+          <a href="#">Support</a>
+        </div>
+
+        <div class="support-system">
+          <li><a href="#">Find answer</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Suggest an improvement </a></li>
+          <li><a href="#">Support page</a></li>
+        </div> -->
+
+        
+     
+    
+      </section>
+
+    </div>
+
+
+
+
+    <script>
+      // selecting the section to load  toload the navbar in
+      $(".side-nav").load("sidenav-bar.html");
+    </script>
+
+    <script src="./script/active.js"></script>
+    <script type="module" src="./script/loadTeacher.js"></script>
+  </body>
+</html>
