@@ -1,0 +1,161 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    
+}
+/* logo section */
+.side-nav .nav-bar {
+    /* border: 1px solid black; */
+    
+
+}
+.nav-bar .logo {
+   border-bottom: 1px solid #ffffff67;
+    text-align: center;
+    font-size: 14px;
+    color: #ffff;
+    padding: 29px 0;
+    
+}
+.logo h3 {
+    padding-top: 20px;
+}
+.logo-img {
+ background-image:  url(../image/Ellipse\ 6.png);
+    width: 100%;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* list section */
+
+
+.nav-list{
+   /* border:  1px solid black; */
+ min-height: 460px;
+   display: flex;
+   flex-direction: column;
+
+   margin-top: 10px;
+   justify-content: space-between;
+   align-items: center;
+} 
+.nav-list .list1 {
+   /* border: 1px solid black; */
+}
+
+ .nav-list .list1 .line {
+/*   
+    border: 1px solid black; */
+    width: 192px;
+    min-height: 40px;
+    color: #ffff;
+      display: flex;
+      align-items: center;
+ 
+    font-size: 14px;
+    padding-left: 10px;
+    margin-top: 4px;
+    
+ }
+ .nav-list .list1 li a{
+    color: #ffff;
+    font-weight: 550;
+    font-size: 14px;
+    font-family: 'Kumbh Sans', sans-serif;
+    ;
+ }
+ .nav-list .list1 img {
+    /* border: 1px solid black; */
+    margin-right: 15px;
+    width: 16px;
+    height: 16px;
+    
+ 
+ 
+ }
+ 
+ .nav-list .list1 li.active{
+ background-color: #509CDB;
+ font-weight: 500;
+ border-radius: 5px;
+ }
+
+ .nav-list .list2 {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+ }
+ .nav-list .list2 li a {
+   color: #ffff;
+   font-weight: 550;
+   font-size: 14px;
+ }
+ .nav-list .list2 li:last-child
+ {
+   
+   padding: 0 10px;
+   text-align: center;
+   background-color: #B9D7F1;
+   border-radius: 10px;
+   
+  
+
+   
+ }
+ .nav-list .list2 li:last-child a {
+   color: black;
+   font-size: 12px;
+ }
+
+
+ /*student dropdown  menu*/
+.dropdown  {
+
+   display:  block !important;
+ 
+   background-image: url(../image/Vector.png);
+   background-repeat: no-repeat;
+   line-height: 45px;
+   background-position: 170px 20px;
+   transition: hover 0.9s;
+
+} 
+.dropdown a{
+   margin-left:  -5px !important;
+}
+.dropdown-menu  {
+
+   background-color: #121C4A;
+   width: 107%;
+   position: relative;
+   display:  none;
+margin-left: -10px;
+
+transition: display 0.8s;
+transition: background-color 0.4s;
+
+}
+.dropdown-menu li a {
+   font-size:  13px !important;
+   margin-left: 18px !important;
+}
+.dropdown-menu li {
+   padding: 12px;
+border-bottom: 1px dashed;
+   background-image: url(../image/Vector\ \(1\).png);
+   background-repeat: no-repeat;
+
+   line-height: 20px;
+   background-position:2vh;
+
+}
+.dropdown-menu li:hover {
+   background-color: #509CDB;
+
+}
+.dropdown:hover .dropdown-menu {
+   display:  block;
+}

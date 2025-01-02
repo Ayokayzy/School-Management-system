@@ -1,0 +1,195 @@
+
+/* nav adjustment */
+
+.grid-layout 
+{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100vh;
+
+
+}
+.side-nav{
+ 
+    width: 245px;
+}
+
+
+.nav-list{
+    /* border:  1px solid black; */
+  min-height: 460px;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+/* header section  */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #ffff;
+    
+}
+
+
+.logout {
+  /* border:  1px solid #000000; */
+  height: 50px;
+  width: 100%;
+  justify-content:flex-end;
+  align-items: center;
+  padding-right: 0px;
+  display:  flex;
+}
+.logout button {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 90px;
+    margin-left: 50px;
+    background-color: #ffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.9s;
+}
+.logout button:hover {
+background-color: rgba(128, 128, 128, 0.316);
+
+    
+}
+button a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.notification {
+    width:28px ;
+    background-repeat: no-repeat;
+    background-image: url(../image/iconoir_bell-notification.png);
+    height: 28px;
+    cursor: pointer;
+}
+
+
+
+.thead {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.thead h1 {
+    color: rgba(0, 0, 0, 0.763);
+    font-size: 35px;
+
+}
+.thead button {
+    width: 150px;
+    color: #ffff;
+    font-weight: 600;
+    background-color: #509CDB;
+    border-radius: 5px;
+    border: none;
+    height: 42px;
+    cursor: pointer;
+}
+
+
+/* form section */
+
+.tform {
+    /* border: 1px solid black; */
+    width: 70%;
+    margin: auto;
+    margin-top: 55px;
+}
+.tform label {
+    display: block;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 9px;
+}
+.tinput {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+}
+.tinput div:first-child {
+    /* border: 1px solid black; */
+    width: 50%;
+  
+}
+.tinput div:last-child {
+    width: 45%;
+    /* border: 1px solid black; */
+}
+.tinput div {
+
+}
+.tform input {
+    width: 90%;
+    height:42px;
+    border: none;
+    outline: 1px solid #a7a7a7;
+    border-color: #A7A7A7;
+    border-radius: 4px;
+}
+.tform select {
+    width: 40%;
+  
+    border: none;
+    outline: 1px solid #A7A7A7;
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 15px;
+    height: 42px;
+}
+.tform #subjects {
+    width: 70%;
+}
+.tform #about {
+    width: 90%;
+    height: 47px;
+    border: none;
+    border-radius: 4px;
+    outline: 1px solid #A7A7A7;
+} 
+.tinput #img {
+    outline: none;
+}
+#reset, #add {
+    width: 131px;
+    margin-top: 30px;
+    margin-right: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+#reset {
+    background-image:  url(../image/Group.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-color: white;
+    background-position: 3px;
+}
+#add:hover {
+    background-color: forestgreen;
+    color: #ffff;
+    font-weight: 600;
+}
+#reset:hover {
+    background-color: red; 
+    color: #ffff;
+    font-weight: 600;
+}

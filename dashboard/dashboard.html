@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link type="image/png" rel="icon" href="./image/Ellipse 6.png" />
+    <link rel="stylesheet" href="./style/layout.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/dashboard.css" />
+    <link rel="stylesheet" href="./style/suport.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="grid-layout">
+      <section class="header grid-item">
+        <header class="logout">
+          <div class="notification"></div>
+          <div class="login">
+            <button><a href="#">Log out</a></button>
+          </div>
+        </header>
+      </section>
+
+      <section class="side-nav grid-item" id="side"></section>
+
+      <section class="content grid-item">
+        <div class="dashboard-content">
+          <div class="welcome">
+            <h1>Welcome to your dashboard, Udemy school</h1>
+            <p>Uyo/school/@teachable.com</p>
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <h2>Add other admins</h2>
+                <p>
+                  Create rich course content and coaching products for your
+                  students. When you give them a pricing plan, they’ll appear on
+                  your site!
+                </p>
+              </li>
+              <li>
+                <h2>Add classes</h2>
+                <p>
+                  Create rich course content and coaching products for your
+                  students. When you give them a pricing plan, they’ll appear on
+                  your site!
+                </p>
+              </li>
+              <li>
+                <h2>Add students</h2>
+                <p>
+                  Create rich course content and coaching products for your
+                  students. When you give them a pricing plan, they’ll appear on
+                  your site!
+                </p>
+              </li>
+            </ul>
+
+            <div class="support">
+              <img src="./image/bx_support.png" alt="" />
+              <a href="#">Support</a>
+            </div>
+
+            <div class="support-system">
+              <li><a href="#">Find answer</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Suggest an improvement </a></li>
+              <li><a href="#">Support page</a></li>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // selecting the section to load  toload the navbar in
+      $(".side-nav").load("sidenav-bar.html");
+    </script>
+
+    <script src="./script/active.js"></script>
+  </body>
+</html>

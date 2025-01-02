@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Teacher</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link type="image/png" rel="icon" href="./image/Ellipse 6.png" />
+    <link rel="stylesheet" href="./style/layout.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/suport.css" />
+    <link rel="stylesheet" href="./style/add-teacher.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="grid-layout">
+      <section class="header grid-item">
+        <header class="logout">
+          <div class="notification"></div>
+          <div class="login">
+            <button><a href="#">Log out</a></button>
+          </div>
+        </header>
+      </section>
+
+      <section class="side-nav grid-item" id="side"></section>
+
+      <section class="content grid-item">
+        <div class="thead">
+          <h1>Add Teachers</h1>
+
+          <button>Import CSV</button>
+        </div>
+
+        <div class="tform">
+          <form method="#" action="#">
+            <div class="tinput">
+              <div>
+                <label for="name">Fullname</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div>
+                <label for="img">profile picture</label>
+                <input
+                  type="file"
+                  name="avater"
+                  id="img"
+                  accept="image/*" />
+              </div>
+            </div>
+            <div class="tinput">
+              <div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div>
+                <select id="class" name="class" required>
+                  <option value="" disabled selected>Choose a class</option>
+                  <optgroup label="Junior Secondary">
+                    <option value="jss1">JSS 1</option>
+                    <option value="jss2">JSS 2</option>
+                    <option value="jss3">JSS 3</option>
+                  </optgroup>
+
+                  <optgroup label="Senior Secondary">
+                    <option value="ss1">SS 1</option>
+                    <option value="ss2">SS 2</option>
+                    <option value="ss3">SS 3</option>
+                  </optgroup>
+                </select>
+
+
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Choose gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                
+              </div>
+
+
+            </div>
+            <div class="tinput">
+                <div>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+                </div>
+                <div>
+              <label for="phone">Phone No:</label>
+              <input type="tel" name="phoneno" id="phone" />
+                </div>
+            </div>
+            <div class="tinput">
+                <div>
+              <label for="subjects">Choose a subject:</label>
+              <select id="subjects" name="subject">
+                <option value="" disabled selected>Choose a subject</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="English">English</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Computer">Computer Science</option>
+                <option value="Economics">Economics</option>
+                <option value="Art">Art</option>
+                <option value="Music">Music</option>
+                <option value="Physical-education">Physical Education</option>
+              </select>
+                </div>
+
+                <div>
+
+              <label for="about">About</label>
+              <textarea name="about" id="about"> </textarea>
+                </div>
+            </div>
+
+            <div class="btn">
+                <input type="reset" value="Add another" id="reset">
+                <input type="button" value="Add Teacher" id="add">
+            </div>
+
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // selecting the section to load  toload the navbar in
+      $(".side-nav").load("sidenav-bar.html");
+    </script>
+
+    <script src="./script/active.js"></script>
+    <script src="./script/addteachers.js"></script>
+  </body>
+</html>
