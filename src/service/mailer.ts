@@ -36,7 +36,7 @@ export default async (
       viewEngine: {
         extname: ".hbs",
         layoutsDir: path.join(__dirname, "../templates/"),
-        defaultLayout: false,
+        defaultLayout: "",
         partialsDir: path.join(__dirname, "../templates/"),
       },
       viewPath: path.join(__dirname, "../templates/"),
