@@ -751,7 +751,7 @@ etag@~1.8.1:
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
-"express-handlebars@>= 8.0.0":
+express-handlebars@^8.0.1, "express-handlebars@>= 8.0.0":
   version "8.0.1"
   resolved "https://registry.npmjs.org/express-handlebars/-/express-handlebars-8.0.1.tgz"
   integrity sha512-mdas0PTbgQnwSyAjcYM7OMaftM8nJ3Kqz6yAyK4iCFvMOGGvh6pv42IHwcE5PBpS6ffYeZRSsgAdYUMG4CSjhQ==
