@@ -51,7 +51,8 @@ form label {
     margin-bottom: 1.5rem;
 }
 
-input[type="password"] {
+input[type="email"],
+input[type="token"] {
     width: 80%;
     padding: 0.75rem;
     padding-right: 2.5rem;
@@ -60,29 +61,6 @@ input[type="password"] {
     font-size: 13px;
 }
 
-button.toggle-visibility {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button.toggle-visibility:hover {
-    color: #007BFF;
-}
-
-p.note {
-    font-size: 13px;
-    color: #777;
-    text-align: left;
-    margin-top: -20px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-}
 
 button[type="submit"] {
     background-color: #2D88D4;
