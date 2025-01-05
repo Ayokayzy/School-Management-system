@@ -49,6 +49,8 @@ input[type="email"] {
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    border: none;
+    outline: 1px solid black;
     font-size: 13px;
     color: #A7A7A7;
 }
@@ -86,4 +88,18 @@ button:hover {
 
 .signup a:hover {
     text-decoration: underline;
+}
+
+.mgs {
+ 
+    margin-top: -7px;
+    display: none;
+    font-size: 12px;
+
+}
+
+.err {
+   font-size: 12px;
+   margin-bottom: 20px;
+   
 }

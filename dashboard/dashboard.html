@@ -25,15 +25,18 @@
             <button><a href="#">Log out</a></button>
           </div>
         </header>
+
+        
       </section>
 
       <section class="side-nav grid-item" id="side"></section>
 
       <section class="content grid-item">
+      
         <div class="dashboard-content">
           <div class="welcome">
-            <h1>Welcome to your dashboard, Udemy school</h1>
-            <p>Uyo/school/@teachable.com</p>
+            <h1>Welcome to your dashboard, <span class="schoolname">Udemy </span> school</h1>
+            <p class="gmail">Uyo/school/@teachable.com</p>
           </div>
           <div class="options">
             <ul>
@@ -86,6 +89,7 @@
       $(".side-nav").load("sidenav-bar.html");
     </script>
 
+    <script type="module" src="./script/dashboard.js"></script>
     <script src="./script/active.js"></script>
   </body>
 </html>
