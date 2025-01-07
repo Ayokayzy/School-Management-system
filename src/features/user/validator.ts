@@ -28,13 +28,34 @@ export const userValidator = [
   ...passwordValidator,
 ];
 
-export const updateUserValidator = [
+export const createUserValidator = [
   body("fullName", "Fullname is required")
     .trim()
+    .notEmpty()
     .isString()
     .toLowerCase(),
   body("username", "Username is required")
     .trim()
+    .notEmpty()
     .isString()
     .toLowerCase(),
+  body("email", "Email is required")
+    .trim()
+    .isEmail()
+    .withMessage("Email address is invalid"),
+  body("gender", "Email is required")
+    .trim()
+    .isEmail()
+    .withMessage("Email address is invalid"),
+  body("type", "User Type is required")
+    .trim()
+    .notEmpty()
+    .matches(/\b(?:admin|teacher|student)\b/)
+    .withMessage("Role is invalid"),
+  ...passwordValidator,
+];
+
+export const updateUserValidator = [
+  body("fullName", "Fullname is required").trim().isString().toLowerCase(),
+  body("username", "Username is required").trim().isString().toLowerCase(),
 ];
