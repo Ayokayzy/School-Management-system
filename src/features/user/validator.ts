@@ -31,12 +31,10 @@ export const userValidator = [
 export const updateUserValidator = [
   body("fullName", "Fullname is required")
     .trim()
-    .notEmpty()
     .isString()
     .toLowerCase(),
   body("username", "Username is required")
     .trim()
-    .notEmpty()
     .isString()
     .toLowerCase(),
 ];

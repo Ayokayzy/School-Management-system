@@ -33,6 +33,25 @@ export const fetchUser = async (
   }
 };
 
+export const fetchAllUsers = async (
+  req: Req,
+  res: Response,
+  next: NextFunction
+) => {
+  const { type } = req.query;
+  try {
+    let user;
+    if (type) {
+      user = await User.find({ type });
+    } else {
+      user = await User.find();
+    }
+    return response(res, 200, "User details", user);
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const updateProfile = async (
   req: Req,
   res: Response,
