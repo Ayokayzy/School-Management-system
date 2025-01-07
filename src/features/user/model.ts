@@ -55,7 +55,7 @@ const userSchema: Schema = new Schema({
   },
   type: {
     type: String,
-    enum: ["admin", "staff", "user"],
+    enum: ["admin", "teacher", "student"],
     default: "admin",
   },
   noOfStaffs: {

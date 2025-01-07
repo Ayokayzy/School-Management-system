@@ -43,15 +43,12 @@ export const createUserValidator = [
     .trim()
     .isEmail()
     .withMessage("Email address is invalid"),
-  body("gender", "Email is required")
-    .trim()
-    .isEmail()
-    .withMessage("Email address is invalid"),
   body("type", "User Type is required")
     .trim()
     .notEmpty()
+    .withMessage("User type is required")
     .matches(/\b(?:admin|teacher|student)\b/)
-    .withMessage("Role is invalid"),
+    .withMessage("User type is invalid"),
   ...passwordValidator,
 ];
 
