@@ -21,8 +21,10 @@ export interface UserType extends Document {
   description: string;
   age: string;
   gender: string;
-  class: string;
-  subject: string;
+  class: Schema.Types.ObjectId;
+  classAssigned: Schema.Types.ObjectId[]
+  subject: string[];
+  createdBy: Schema.Types.ObjectId
   billing: string;
   status: string;
   loginLast: Date;
