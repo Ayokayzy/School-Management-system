@@ -78,16 +78,22 @@ const userSchema: Schema = new Schema({
     enum: ["male", "female", "other"],
   },
   class: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: "Class",
   },
-  subject: {
-    type: String,
+  classAssigned: {
+    type: [Schema.Types.ObjectId],
+    ref: "Class",
+  },
+  subjects: {
+    type: [String],
   },
   billing: {
     type: Object,
   },
   createdBy: {
     type: Schema.Types.ObjectId,
+    ref: "User",
   },
   avatar: {
     publicId: String,
