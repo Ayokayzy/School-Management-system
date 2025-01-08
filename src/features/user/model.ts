@@ -48,6 +48,7 @@ const userSchema: Schema = new Schema({
   password: {
     type: String,
     required: true,
+    select: false,
   },
   emailVerified: {
     type: Boolean,
@@ -84,6 +85,9 @@ const userSchema: Schema = new Schema({
   },
   billing: {
     type: Object,
+  },
+  createdBy: {
+    type: Schema.Types.ObjectId,
   },
   avatar: {
     publicId: String,

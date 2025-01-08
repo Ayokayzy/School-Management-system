@@ -39,13 +39,19 @@ export const fetchAllUsers = async (
   next: NextFunction
 ) => {
   const { type } = req.query;
+  const userId = req.user?._id;
   try {
-    let user;
-    if (type) {
-      user = await User.find({ type });
-    } else {
-      user = await User.find();
+    if (
+      typeof type === "string" &&
+      !["admin", "user", "manager"].includes(type)
+    ) {
+      return response(res, 400, "Invalid user type");
     }
+    const query: { createdBy: typeof userId; type?: string } = {
+      createdBy: userId,
+    };
+    if (typeof type === "string") query.type = type;
+    const user = await User.find(query);
     return response(res, 200, "User details", user);
   } catch (error) {
     next(error);
@@ -58,13 +64,10 @@ export const updateProfile = async (
   next: NextFunction
 ) => {
   try {
-    const {
-      user,
-      body: { firstname, lastname, phone },
-    } = req;
+    const { user, body } = req;
     const updatedUser = await User.findOneAndUpdate(
       { _id: user?._id },
-      { firstname, lastname, phone },
+      { ...body },
       {
         new: true,
       }

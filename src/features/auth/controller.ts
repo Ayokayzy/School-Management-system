@@ -9,12 +9,9 @@ import mailer from "../../service/mailer";
 import { signJWT } from "../../utilities/JWT";
 import { Req } from "../../types";
 
-export const signup = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const signup = async (req: Req, res: Response, next: NextFunction) => {
   try {
+    const user = await User.findById(req?.user?._id);
     const creationResult = await createUser(req.body);
     if (!creationResult.status) throw creationResult.data;
     const tokenResult = await createToken(creationResult.data, "verifyEmail");
@@ -25,6 +22,12 @@ export const signup = async (
       tokenResult.data,
       "account_verification"
     );
+    if (user) {
+      await User.findOneAndUpdate(
+        { _id: creationResult.data._id },
+        { createdBy: user._id }
+      );
+    }
     return response(
       res,
       201,
@@ -71,11 +74,7 @@ export const requestResendPassword = async (
     const tokenResult = await createToken(user, type);
     if (!tokenResult.status) return response(res, 400, tokenResult.message);
     await mailer(email, subject, tokenResult.data, "password_reset");
-    return response(
-      res,
-      200,
-      "A token has been sent to your mail"
-    );
+    return response(res, 200, "A token has been sent to your mail");
   } catch (error) {
     next(error);
   }
@@ -128,7 +127,7 @@ export const login = async (
 ) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+password");
     if (!user)
       return response(res, 401, "The email address is not valid", null);
     const passwordMatches = bcrypt.compareSync(password, user.password);
@@ -147,7 +146,10 @@ export const login = async (
       );
     const token = signJWT({ _id: user._id });
     await User.findByIdAndUpdate(user._id, { status: "active" });
-    return response(res, 200, "Welcome to Statisda", { token, user });
+
+    // Re-fetch user data without password
+    const sanitizedUser = await User.findById(user._id).select("-password");
+    return response(res, 200, "Welcome to Statisda", { token, sanitizedUser });
   } catch (error) {
     next(error);
   }
