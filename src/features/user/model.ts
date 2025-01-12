@@ -80,12 +80,12 @@ const userSchema: Schema = new Schema({
     enum: ["male", "female", "other"],
   },
   class: {
-    type: Schema.Types.ObjectId,
-    ref: "Class",
+    // type: Schema.Types.ObjectId,
+    type: String,
+    // ref: "Class",
   },
   classAssigned: {
-    type: [Schema.Types.ObjectId],
-    ref: "Class",
+    type: String,
   },
   subjects: {
     type: [String],
