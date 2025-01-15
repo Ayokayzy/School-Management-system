@@ -2,47 +2,6 @@
 
 $( function() {
 
-    function checkAuth()
-    {
-        const token = localStorage.getItem('authToken');
-
-
-
-        if (!token)
-        {
-            alert("You need to log in to access the dashboard. thank you");
-
-            window.location.href = '../Login-Signup/03-login.html';
-
-
-            return;
-        }
-    }
-
-
-    checkAuth();
-
-
-    // logout
-
-    $('.login').first().click(() =>{
-       
-
-
-    if (confirm("Are you sure you want to logout? "))
-    {
-        // Clear the token
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('userData');
-
-    // Redirect to the login page
-    alert('You have been logged out.');
-    window.location.href = '../Login-Signup/03-login.html';
-
-    }
-    })
-
-
 function loadalldata() {
 
     let data  = JSON.parse(localStorage.getItem('userData'));
@@ -51,7 +10,6 @@ function loadalldata() {
     $('.gmail').text(data.email)
 
 
-    console.log(data);
 
 }
 

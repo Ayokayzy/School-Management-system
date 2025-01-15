@@ -63,8 +63,10 @@ export class SignUp {
             this.ajaxRequest('login', data)
                 .then((res) => {
                     // Store the token and user data in local storage
+
+
                     localStorage.setItem('authToken', res.data.token);
-                    localStorage.setItem('userData', JSON.stringify(res.data.user));
+                    localStorage.setItem('userData', JSON.stringify(res.data.sanitizedUser));
 
                     this.message(res.message, 'green'); // Display success message
 
@@ -120,13 +122,14 @@ export class SignUp {
             // Collect token regeneration data
             const data = {
                 email: $(this.inputs[0]).val(),
-                type: "accountVerification"
+                type: $('select').val()
             };
 
+       
             // Send AJAX request to regenerate token
             this.ajaxRequest('request-token', data)
                 .then((res) => {
-                    console.log(res); // Log server response
+                    this.message(res.message, 'green'); // Log server response
                 })
                 .catch((err) => {
                     this.message(err, 'red'); // Display error message

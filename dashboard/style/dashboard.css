@@ -57,16 +57,17 @@ button a{
 .dashboard-content .welcome {
     /* border: 1px solid black; */
     margin-bottom: 50px;
+    margin-left: 70px;
 }
 .dashboard-content h1{
-font-size: 32px ;
+font-size: 25px ;
 color: #4F4F4F;
 font-weight: 700;
 opacity: 0.9;
 }
 .dashboard-content .welcome p {
   font-size: 21px;
-  margin-top: 18px;
+  margin-top: 10px;
   font-weight: 700;
   opacity: 0.8;
   margin-left: 75px;

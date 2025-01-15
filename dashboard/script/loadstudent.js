@@ -1,5 +1,5 @@
 // Import the Implementation class from the app.js script
-import { Implementation } from "../script/app.js";
+import Implementation from '../script/app.js';
 
 // Wait for the document to be ready before executing the script
 $(function () {

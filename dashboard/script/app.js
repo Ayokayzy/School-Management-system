@@ -2,32 +2,63 @@
  * Implementation - class for all implementation of teacher & student data
  */
 
-export class Implementation {
+export default class Implementation {
 
     constructor(url, person) {
         // Initialize instance variables with provided values
         this.url = url;              // URL to fetch data from
         this.user = person;          // User type (e.g., student or teacher)
+        this.token = localStorage.getItem('authToken');
         this.select = $('#select');  // Select field for filtering by class
         this.table = $('.tdata');    // Table container to display data
         this.input = $("input");   // Input field for filtering by name or email
+        
     }
 
     // Function to load data from the provided URL
-    loaddata() {  
-        return new Promise((resolve, reject) => {
-            // Make an AJAX GET request to the URL
-            $.get(this.url, (data, textStatus, jqXHR) => {
-                resolve(data);  // Resolve the promise with fetched data
-            });
-        });
+    loaddata() { 
+      
+
+    return fetch(this.url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${this.token}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+
+            console.log(data)
+            let value = this.formatdata(data.data);
+            console.log(value)
+            localStorage.setItem('datavalue', JSON.stringify(value));
+          
+        })
+
+        // return new Promise((resolve, reject) => {
+        //     // Make an AJAX GET request to the URL
+        //     $.get(this.url, (data, textStatus, jqXHR) => {
+        //         console.log(data)
+        //         // resolve(data);  // Resolve the promise with fetched data
+        //     });
+        // });
     }
 
     // Load all data and populate the table based on the user type
     loadalldata() {
-        this.loaddata().then(data => {
-            this.choooseloadData(data); // Delegate data handling based on user type
-        });
+
+   
+        // filter data from type in all user teacher/ student
+        let data = this.checktype(this.user);
+
+        console.log(data)
+
+        this.choooseloadData(data)
+
+        // this.loaddata().then(data => {
+        //     this.choooseloadData(data); // Delegate data handling based on user type
+        // });
     }
 
     // Decide which data-loading method to use based on user type
@@ -44,8 +75,13 @@ export class Implementation {
         this.select.change((e) => {
             let value = $(e.target).val().toLowerCase(); // Get selected class value
 
+    console.log(value)
+
+            // loads the data first by checking the types
+            let data = this.checktype(this.user);
             // Fetch data and filter by class
-            this.loaddata().then(data => {
+
+         
                 let filter = data.filter(val => val.class.toLowerCase() === value);
 
                 // Clear the table and display filtered data
@@ -55,7 +91,7 @@ export class Implementation {
                 if (value === 'all class') {
                     this.choooseloadData(data); // Reload all data if "All Class" is selected
                 }
-            });
+        
         });
     }
 
@@ -65,8 +101,9 @@ export class Implementation {
             let value = $(e.target).val().toLowerCase(); // Get input value
 
             // Fetch data and filter by name or email
-            this.loaddata().then(data => {
-                let filter = data.filter(val => 
+            let loaddata = this.checktype(this.user);
+            
+                let filter = loaddata.filter(val => 
                     val.name.toLowerCase().includes(value) || 
                     val.email.toLowerCase().includes(value)
                 );
@@ -74,7 +111,7 @@ export class Implementation {
                 // Clear the table and display filtered data
                 this.table.find('tbody').html('');
                 this.choooseloadData(filter);
-            });
+          
         });
     }
 
@@ -89,14 +126,16 @@ export class Implementation {
                 let student_id = $($(e.target).parent().children()[0]).text(); // Get student ID
 
                 // Fetch data and find the matching student
-                this.loaddata().then(data => {
-                    let value = data.filter(val => val.student_id === student_id);
+                        let data = this.checktype(this.user);
 
+                        // console.log(data)
+                    let value = data.filter(val => val.ids === student_id);
+                        console.log(value)
                     // Populate profile fields with student details
                     let details = $('.id, .prof, .name, .class, .aboutinfo, .ag, .gen');
 
-                    $(details[0]).text(value[0].student_id);
-                    $(details[1]).attr('src', value[0].image);
+                    $(details[0]).text(value[0].ids);
+                    $(details[1]).attr('src', value[0].avatar);
                     $(details[2]).text(value[0].name);
                     $(details[3]).text(value[0].class);
                     $(details[4]).text(value[0].about);
@@ -105,7 +144,7 @@ export class Implementation {
 
                     // Show the profile with a fade-in effect
                     student_profile.fadeIn('slow');
-                });
+                
             }
         });
     }
@@ -137,9 +176,9 @@ export class Implementation {
             // Create a table row with student details
             let dvalue = `
                 <tr class='strow'>
-                    <td>${val.student_id}</td>
+                    <td>S${val.id.slice(-4)}</td>
                     <td>
-                        <img src="${val.image}" alt="">
+                        <img src="${val.avatar}" alt="">
                         ${val.name}
                     </td>
                     <td>${val.email}</td>
@@ -157,7 +196,7 @@ export class Implementation {
         $(".ps").click(() => {
             let value = $('#psearch').val().trim().toLowerCase(); // Get search input value
 
-            this.loaddata().then(data => {
+                let data = this.checktype(this.user);
                 let filtered = data.filter(val => val.name.toLowerCase() === value);
 
                 if (filtered.length >= 1) {
@@ -173,12 +212,14 @@ export class Implementation {
                     $('.notfound').css('display', 'none');
                     this.profilenotfound();
                 }
-            });
+        
         });
     }
 
     // Build and display the teacher's profile
     displayTeacherProfile(data) {
+
+
         let profile = $('.name, .subject, .aboutinfo, .ag, .gen, .img');
 
         $(profile[0]).attr('src', `${data.avatar}`); 
@@ -200,5 +241,76 @@ export class Implementation {
             <h1>No Teacher found at this time</h1>
         `);
         $('.tsearch').after(div);
+    }
+
+
+    formatdata(data){
+        let value = []; 
+        data.forEach(val => {
+         let dat =   {
+                name: val.fullName,
+               subject: `${val.subject? val.subject: 'mathematices'}`,
+               class: `${val.class? val.class: 'jss2'}`,
+                email:  val.email,
+                gender: val.gender,
+                age: val.age,
+                about: val.description,
+                type: val.type,
+                id: `${val._id}`,
+                ids: `S${val._id.slice(-4)}`,
+                avatar: `${val.avatar ? val.avatar.url: this.avatar()}`
+            }
+            value.push(dat);
+        })
+
+
+        return value;
+
+    }
+
+    checktype(type)
+    {
+        let data = JSON.parse(localStorage.getItem('datavalue'));
+        
+        let value  = []
+        data.filter(val => {
+            if (val.type  == type)
+            {
+                    value.push(val);
+            }
+
+        })
+
+        return value;
+
+    }
+
+
+    avatar () 
+    {
+
+        let list = [
+            "./image/svg/Ellipse 14-11.svg",
+            "./image/svg/Ellipse 14.svg",
+            "./image/svg/Ellipse 14-1.svg",
+            "./image/svg/Ellipse 14-2.svg",
+            "./image/svg/Ellipse 14-3.svg",
+            "./image/svg/Ellipse 14-4.svg",
+            "./image/svg/Ellipse 14-5.svg",
+            "./image/svg/Ellipse 14-6.svg",
+            "./image/svg/Ellipse 14-7.svg",
+            "./image/svg/Ellipse 14-8.svg",
+            "./image/svg/Ellipse 14-9.svg",
+            "./image/svg/Ellipse 14-10.svg",
+            "./image/svg/Ellipse 14-11.svg",
+            "./image/svg/Ellipse 14.svg",
+            "./image/svg/Ellipse 14-1.svg"
+        ]
+        
+
+        let num = Math.round(Math.random() * 10)
+        return list[num]
+
+
     }
 }

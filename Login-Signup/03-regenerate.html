@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Choose Password</title>
-    <link rel="stylesheet" href="./02-signup.css">
+    <link rel="stylesheet" href="./styles/02-signup.css" />
 
-
-   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
     <div class="container">
-        <h1>Regenerate Token</h1>
-        <div class="form-box">
-            <form>
-                <label for="email">Email Address</label>
-                <div class="input-container">
-                    <input type="email" id="password" placeholder="Enter your email" required>
-                </div>
-               
-                <button type="submit">Generate</button>
-            </form>
-            <a href="./02-signup.html" class="reg">Verify your account</a>
-        </div>
+      <h1>Regenerate Token</h1>
+      <div class="form-box">
+        <form>
+          <label for="email">Email Address</label>
+          <div class="input-container">
+            <input
+              type="email"
+              id="password"
+              placeholder="Enter your email"
+              required />
+          </div>
+          <label for="email">Type of Token</label>
+          <div class="input-container">
+            <select name="" id="">
+              <option selected disabled>Select an option</option>
+              <option value="verifyEmail">verifyEmail</option>
+              <option value="resetPassword">resetPassword</option>
+              <option value="acceptInvite">acceptInvite</option>
+            </select>
+          </div>
+
+          <button type="submit">Generate</button>
+        </form>
+        <a href="./02-signup.html" class="reg">Verify your account</a>
+      </div>
     </div>
 
-
     <script type="module" src="./script/regenerate.js"></script>
-</body>
+  </body>
 </html>
