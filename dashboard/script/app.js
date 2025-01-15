@@ -271,8 +271,7 @@ export default class Implementation {
         return value;
 
     }
-
-
+    
     avatar () 
     {
 
@@ -300,4 +299,61 @@ export default class Implementation {
 
 
     }
+
+
+    addStudentTeacher()
+    {
+     
+        $('form').submit((e) =>{
+            console.log('heloo')
+            e.preventDefault();
+            let data = {
+                     "avatar": {
+                         "url": `${$('#avatar').val()}`
+                     },
+                     "fullName": `${$('#name').val()}`,
+                     "username": `${$('#username').val()}`,
+                     "email": `${$('#email').val()}`,
+                     "type": `${this.user}`,
+                     "address": "123 Elm Street, Springfield, USA",
+                     "description": `${$('#about').val()}`,
+                     "age": `${$('#age').val()}`,
+                     "password": "Omotayo1$",
+                     "gender": `${$('#gender').val()}`,
+                     "class": `${$('#class').val()}`,
+                     "subjects": [
+                         `${$('#subject').val() }`
+                     ]
+         }
+
+
+
+
+fetch(this.url, {
+  method: "POST", 
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${this.token}`  // Replace with your actual token
+  },
+  body: JSON.stringify(data)
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return `New ${this.user}: ${data.fullName} is successfull added`
+  }).then(text => {
+    console.log(text)
+  })
+  .catch((error) => {
+    console.error("Error fetching user data:", error);
+  });
+
+
+
+    
+})
+
+
+}
 }

@@ -44,8 +44,8 @@
                 <input type="text" name="name" id="name" />
               </div>
               <div>
-                <label for="img">profile picture</label>
-                <select id="imageSelect">
+                <label for="avatar">profile picture</label>
+                <select id="avatar" style="width: 150px;">
                   <option value="" disabled selected>Select an avatar</option>
                   <option value="./image/ssvg/Ellipse 14.svg">Ellipse 14</option>
                   <option value="./image/ssvg/Ellipse 14-1.svg">Ellipse 14-1</option>
@@ -97,8 +97,8 @@
             </div>
             <div class="tinput">
                 <div>
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
+                  <label for="username">Username</label>
+                  <input type="text" name="usernma" id="username"/>
                 </div>
                 <div>
               <label for="phone">Phone No:</label>
@@ -113,11 +113,15 @@
               <label for="about">About</label>
               <textarea name="about" id="about"> </textarea>
                 </div>
+                <div>
+                  <label for="age">Age</label>
+                  <input type="number" name="" id="age">
+                </div>
             </div>
 
             <div class="btn">
                 <input type="reset" value="Add another" id="reset">
-                <input type="button" value="Add Student" id="add">
+                <input type="submit" value="Add Student" id="add">
             </div>
 
           </form>
@@ -133,6 +137,8 @@
     <script src="./script/active.js"></script>
 
     <script type="module" src="./script/logout.js"></script>
+
+    <script type="module" src="./script/addStudent.js"></script>
     
   </body>
 </html>

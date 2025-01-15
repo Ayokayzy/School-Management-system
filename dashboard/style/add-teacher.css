@@ -122,6 +122,7 @@ button a{
     width: 100%;
     justify-content: space-between;
     margin-top: 30px;
+
     /* border: 1px solid black; */
 }
 .tinput div:first-child {
@@ -138,6 +139,7 @@ button a{
 }
 .tform input {
     width: 90%;
+    padding: 20px;
     height:42px;
     border: none;
     outline: 1px solid #a7a7a7;
