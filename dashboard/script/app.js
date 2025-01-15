@@ -29,9 +29,9 @@ export default class Implementation {
         .then(res => res.json())
         .then(data => {
 
-            console.log(data)
+        
             let value = this.formatdata(data.data);
-            console.log(value)
+            
             localStorage.setItem('datavalue', JSON.stringify(value));
           
         })
