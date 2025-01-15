@@ -36,13 +36,7 @@ export default class Implementation {
           
         })
 
-        // return new Promise((resolve, reject) => {
-        //     // Make an AJAX GET request to the URL
-        //     $.get(this.url, (data, textStatus, jqXHR) => {
-        //         console.log(data)
-        //         // resolve(data);  // Resolve the promise with fetched data
-        //     });
-        // });
+
     }
 
     // Load all data and populate the table based on the user type
@@ -52,13 +46,8 @@ export default class Implementation {
         // filter data from type in all user teacher/ student
         let data = this.checktype(this.user);
 
-        console.log(data)
 
         this.choooseloadData(data)
-
-        // this.loaddata().then(data => {
-        //     this.choooseloadData(data); // Delegate data handling based on user type
-        // });
     }
 
     // Decide which data-loading method to use based on user type
@@ -74,8 +63,6 @@ export default class Implementation {
     filterClass() {
         this.select.change((e) => {
             let value = $(e.target).val().toLowerCase(); // Get selected class value
-
-    console.log(value)
 
             // loads the data first by checking the types
             let data = this.checktype(this.user);

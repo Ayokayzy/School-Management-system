@@ -2,10 +2,6 @@ import Implementation from '../script/app.js';
 
 $( function() {
 
-
-
-
-
     function checkAuth()
     {
         const token = localStorage.getItem('authToken');
@@ -42,8 +38,7 @@ $( function() {
         alert('You have been logged out.');
         window.location.href = '../Login-Signup/03-login.html';
     
-        }
-        })
+        }})
 
     
   // load school name at navbar
@@ -61,8 +56,5 @@ $( function() {
 let UI = new Implementation('https://school-management-system-tv64.onrender.com/api/v1/user/all', '');
 
 UI.loaddata();
-
- 
-    
 })
          
