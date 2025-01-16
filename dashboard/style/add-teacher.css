@@ -139,7 +139,7 @@ button a{
 }
 .tform input {
     width: 90%;
-    padding: 20px;
+    padding: 0px 20px;
     height:42px;
     border: none;
     outline: 1px solid #a7a7a7;

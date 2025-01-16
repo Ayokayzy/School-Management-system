@@ -303,9 +303,15 @@ export default class Implementation {
 
     addStudentTeacher()
     {
+
      
         $('form').submit((e) =>{
             console.log('heloo')
+
+          let button =  $('#add')[0];
+
+          button.disabled = true;
+
             e.preventDefault();
             let data = {
                      "avatar": {
@@ -330,6 +336,9 @@ export default class Implementation {
 
 
 fetch(this.url, {
+
+
+    
   method: "POST", 
   headers: {
     "Content-Type": "application/json",
@@ -339,21 +348,42 @@ fetch(this.url, {
 })
   .then((response) => {
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+        response.json().then(res => {
+            this.message(res.message, 'red', '.tform');
+        })
+        throw Error()
     }
+   
     return `New ${this.user}: ${data.fullName} is successfull added`
   }).then(text => {
-    console.log(text)
+    this.message(text, 'green', '.tform')
+  
+    button.disabled = false;
+    this.loaddata()
+   console.log( $('form')[0])
   })
   .catch((error) => {
-    console.error("Error fetching user data:", error);
+    console.log("Error fetching user data:", error);
+    button.disabled = false;
   });
 
 
 
     
-})
+})}
+message(msg, color, place)
+{
+    let div = `<div class="del" style="background-color: ${color}; font-size: 18px; text-align: center; color: white; border-radius:4px">${msg}</div>`
 
+    $(place).prepend(div);
+
+
+    setTimeout (() => {
+    $('.del').remove();
+    }, 2000)
 
 }
+
+
+
 }
