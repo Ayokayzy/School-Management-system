@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON to CSV</title>
+</head>
+<body>
+  <button onclick="downloadCSV()">Download CSV</button>
+
+  <script>
+    // Sample JSON data
+    const jsonData = [
+      { "name": "John", "age": 30, "city": "New York" },
+      { "name": "Anna", "age": 22, "city": "London" },
+      { "name": "Mike", "age": 32, "city": "Chicago" }
+    ];
+
+    // Function to convert JSON to CSV
+    function convertToCSV(jsonData) {
+      const header = Object.keys(jsonData[0]);
+      const rows = jsonData.map(row => header.map(field => row[field]).join(","));
+      return [header.join(","), ...rows].join("\n");
+    }
+
+    // Function to trigger CSV file download
+    function downloadCSV() {
+      const csv = convertToCSV(jsonData);
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "data.csv");
+      link.click();
+    }
+  </script>
+</body>
+</html>

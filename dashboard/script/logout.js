@@ -56,5 +56,38 @@ $( function() {
 let UI = new Implementation('https://school-management-system-tv64.onrender.com/api/v1/user/all', '');
 
 UI.loaddata();
+
+
+
+// export csv data
+let button =  $('.btn').children()[0]
+
+$(button).click(downloadCsv);
+
+
+const jsonData = JSON.parse(localStorage.getItem('datavalue'));
+
+ // Function to convert JSON to CSV
+ function convertToCSV(jsonData) {
+    const header = Object.keys(jsonData[0]);
+    const rows = jsonData.map(row => header.map(field => row[field]).join(","));
+    return [header.join(","), ...rows].join("\n");
+  }
+
+
+// Function to trigger CSV file download
+function downloadCsv ()
+{
+    const csv = convertToCSV(jsonData);
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", "data.csv");
+    link.click();
+}
+
+
+
 })
          
