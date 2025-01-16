@@ -363,7 +363,7 @@ fetch(this.url, {
    console.log( $('form')[0])
   })
   .catch((error) => {
-    console.log("Error fetching user data:", error);
+    this.message(`Error fetching user data:", ${error}`, 'red', '.tform');
     button.disabled = false;
   });
 
@@ -371,18 +371,34 @@ fetch(this.url, {
 
     
 })}
-message(msg, color, place)
-{
-    let div = `<div class="del" style="background-color: ${color}; font-size: 18px; text-align: center; color: white; border-radius:4px">${msg}</div>`
 
-    $(place).prepend(div);
+message(msg, color, place) {
+    // Remove any existing message element to avoid duplicates
+    $(place).find('.message').remove();
 
+    // Create a new message element
+    const messageElement = $('<div>')
+        .addClass('message') // Add a class for styling
+        .css({
+            backgroundColor: color, // Set text color
+            margin: '10px 0', // Add margin for spacing
+            textAlign: 'center',
+            color: 'white',
+            borderRadius: '4px',
+            padding: '6px'
 
-    setTimeout (() => {
-    $('.del').remove();
-    }, 2000)
+        })
+        .text(msg); // Set the message text
 
+    // Append the message element to the specified place
+    $(place).prepend(messageElement);
+
+    // Optionally remove the message after a few seconds
+    setTimeout(() => {
+        messageElement.fadeOut('slow', () => messageElement.remove());
+    }, 3000); // 3 seconds
 }
+
 
 
 
