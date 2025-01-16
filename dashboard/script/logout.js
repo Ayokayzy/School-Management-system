@@ -77,7 +77,16 @@ const jsonData = JSON.parse(localStorage.getItem('datavalue'));
 
 // Function to trigger CSV file download
 function downloadCsv ()
+
 {
+    if (confirm('Do you want to export all student and teacher data via csv? '))
+    {
+        alert("importation sucessfulll ");
+    }
+    else{
+        return
+    }
+
     const csv = convertToCSV(jsonData);
     const blob = new Blob([csv], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
