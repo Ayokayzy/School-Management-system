@@ -5,6 +5,7 @@ export class SignUp {
     constructor() {
         this.form = $('form'); // Select the form element
         this.inputs = $('input'); // Select all input elements within the form
+        this.token = localStorage.getItem('authToken');
     }
 
     /**
@@ -219,5 +220,17 @@ export class SignUp {
         }
 
         return false;
+    }
+
+    // changePassword
+    changepassword()
+    {
+
+        $('form').click(() => {
+
+
+            console.log('hettt')
+        })
+
     }
 }

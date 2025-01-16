@@ -386,4 +386,98 @@ message(msg, color, place)
 
 
 
+exam() {
+
+
+    $('form').submit((e) => {
+
+        e.preventDefault();
+
+        let data = {
+            subject: $('#subject').val(),
+            class: $('#class').val(),
+            date: $("#date").val(),
+            start: $("#start").val(),
+            end: $("#end").val(),
+            key: `${Math.random()}`
+        }
+
+        this.addSchedule(data);
+
+        let val = [];
+   
+        if(localStorage.getItem('exam') != null)
+        {
+            val = JSON.parse(localStorage.getItem('exam'))
+        }
+
+
+        val.unshift(data);
+
+
+        localStorage.setItem('exam', JSON.stringify(val));
+  
+
+        $('form')[0].reset();
+    })
+
+  
+}
+
+addSchedule(data)
+{
+  let value =  `
+            <tr>
+                <td>${data.subject}</td>
+                <td>${data.class}</td>
+                <td>${data.date}</td>
+                <td>${data.start}</td>
+                <td>${data.end}</td>
+            </tr> `
+        value = $(value)
+
+       let btn = `<td> <button type="button" class="btn-close"></button> </td>`
+         btn = $(btn);
+
+         value.append(btn)
+
+        //  the cancel button implementation
+         btn.click((e) => {
+            $(e.target).parents('tr').remove();
+            let value = JSON.parse(localStorage.getItem('exam'));
+           let hold = value.filter((val )=> {
+                if (val.key == data.key)
+                {
+                    return val;
+                }})
+
+                console.log(value)
+
+                let idx = value.indexOf(hold[0]); 
+                value.splice(idx, 1)
+
+
+                localStorage.setItem('exam', JSON.stringify(value));
+         })
+
+         $('tbody').prepend(value);
+        
+
+
+}
+
+
+loadExams()
+{
+    let data = JSON.parse(localStorage.getItem('exam'));
+
+
+    data.forEach(val => {
+
+        this.addSchedule(val)
+    })
+}
+
+
+
 }
