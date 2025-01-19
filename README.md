@@ -6,6 +6,8 @@ Table of Contents
     Project Architecture
     Tech Stack and Frameworks
     Team Contributions
+    Usage
+    Future Enhancements
     
 
 Project Overview
@@ -72,3 +74,19 @@ Backend
     Framework: Express.js
     Database: MongoDB 
     Authentication: JSON Web Tokens (JWT)
+
+Usage
+Admin:
+    Manage users (students and teachers).
+    Create and assign classes to students and teachers.
+    Add Teachers
+    Add Students
+
+
+Future Enhancements
+    Integration with third-party tools (e.g., Zoom, Google Classroom).
+    Automated notifications via email or SMS.
+    Advanced reporting and analytics.
+    Mobile app development.
+    School Fees payment support
+    Exams management support
