@@ -34,12 +34,14 @@ Frontend Development
     Optimized user interface for better performance.
 
 Backend Development
+    
     The backend was Developed by theayokayzy1@gmail.com (Ayokayzy).
     Designed and implemented the database schema.
     Developed RESTful APIs for all major features.
     Implemented authentication and authorization.
 
 Project Architecture
+
 The project is divided into frontend and backend components to ensure modularity and scalability.
 
 Frontend
@@ -59,24 +61,30 @@ Backend
         Manage data storage and retrieval using a database.
 
 System Flow
+    
     Users log in to the system based on their roles (strictly Admin).
     Frontend sends requests to the backend via RESTful APIs.
     Backend processes requests, communicates with the database, and sends responses back to the frontend.
     Frontend updates the user interface based on the received data.
 
 Tech Stack and Frameworks
+
 Frontend
     HTML5, CSS3, JavaScript: For creating the user interface.
+
 Framework: Vanila Frontend.
 
 Backend
+    
     Programming Language: Node.js
     Framework: Express.js
     Database: MongoDB 
     Authentication: JSON Web Tokens (JWT)
 
 Usage
+
 Admin:
+    
     Manage users (students and teachers).
     Create and assign classes to students and teachers.
     Add Teachers
@@ -84,6 +92,7 @@ Admin:
 
 
 Future Enhancements
+    
     Integration with third-party tools (e.g., Zoom, Google Classroom).
     Automated notifications via email or SMS.
     Advanced reporting and analytics.
