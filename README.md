@@ -21,12 +21,12 @@ Secure Authentication: Login system with role-based access control.
 
 Team Contributions
 Frontend Development
-[Name or GitHub Handle of Frontend Developer 1]
+1. The Frontend was Developed by aolamilekan79@gmail.com (Deroot23).
 
 Designed and implemented the user interface for the admin panel.
 Worked on responsive layouts for mobile and desktop users.
 
-2. The Frontend was Developed by Omotoboraomotayo@gmail.com (Teeclever)
+2. The Frontend was Developed by Omotoboraomotayo@gmail.com (Teeclever).
 
 Integrated API endpoints with frontend components.
 Optimized user interface for better performance.
@@ -42,8 +42,7 @@ Project Architecture
 The project is divided into frontend and backend components to ensure modularity and scalability.
 
 Frontend
-Role: Handles the user interface and user experience. The Frontend was designed by two different authors namely;  and aolamilekan79@gmail.com (Deroot23).
-
+Role: Handles the user interface and user experience.
 Responsibilities:
 Design and implement responsive web pages.
 Ensure smooth navigation and interaction for users.
