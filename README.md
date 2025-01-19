@@ -22,35 +22,36 @@ Team Contributions
 Frontend Development
 1. The Frontend was Developed by aolamilekan79@gmail.com (Deroot23).
 
-Designed and implemented the user interface for the admin panel.
-Worked on responsive layouts for mobile and desktop users.
+    Designed and implemented the user interface for the admin panel.
+    Worked on responsive layouts for mobile and desktop users.
 
 2. The Frontend was Developed by Omotoboraomotayo@gmail.com (Teeclever).
 
-Integrated API endpoints with frontend components.
-Optimized user interface for better performance.
-
+    Integrated API endpoints with frontend components.
+    Designed and implemented the user interface for the admin panel.
+    Optimized user interface for better performance.
 
 Backend Development
-The backend was Developed by theayokayzy1@gmail.com (Ayokayzy).
-Designed and implemented the database schema.
-Developed RESTful APIs for all major features.
-Implemented authentication and authorization.
+    The backend was Developed by theayokayzy1@gmail.com (Ayokayzy).
+    Designed and implemented the database schema.
+    Developed RESTful APIs for all major features.
+    Implemented authentication and authorization.
 
 Project Architecture
 The project is divided into frontend and backend components to ensure modularity and scalability.
 
 Frontend
-Role: Handles the user interface and user experience.
-Responsibilities:
-Design and implement responsive web pages.
-Ensure smooth navigation and interaction for users.
-Connect with the backend API to fetch and display data.
+    Role: Handles the user interface and user experience.
+    
+    Responsibilities:
+        Design and implement responsive web pages.
+        Ensure smooth navigation and interaction for users.
+        Connect with the backend API to fetch and display data.
 
 Backend
-Role: Manages business logic, data processing, and database interactions.
+    Role: Manages business logic, data processing, and database interactions.
 
-Responsibilities:
+    Responsibilities:
 Design and implement RESTful APIs.
 Handle authentication and authorization.
 Manage data storage and retrieval using a database.
