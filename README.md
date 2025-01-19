@@ -35,7 +35,8 @@ Frontend Development
 
 Backend Development
     
-    The backend was Developed by theayokayzy1@gmail.com (Ayokayzy).
+The backend was Developed by theayokayzy1@gmail.com (Ayokayzy).
+    
     Designed and implemented the database schema.
     Developed RESTful APIs for all major features.
     Implemented authentication and authorization.
