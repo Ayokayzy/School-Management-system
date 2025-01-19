@@ -42,7 +42,7 @@ The project is divided into frontend and backend components to ensure modularity
 
 Frontend
     Role: Handles the user interface and user experience.
-    
+
     Responsibilities:
         Design and implement responsive web pages.
         Ensure smooth navigation and interaction for users.
@@ -52,23 +52,23 @@ Backend
     Role: Manages business logic, data processing, and database interactions.
 
     Responsibilities:
-Design and implement RESTful APIs.
-Handle authentication and authorization.
-Manage data storage and retrieval using a database.
+        Design and implement RESTful APIs.
+        Handle authentication and authorization.
+        Manage data storage and retrieval using a database.
 
 System Flow
-Users log in to the system based on their roles (strictly Admin).
-Frontend sends requests to the backend via RESTful APIs.
-Backend processes requests, communicates with the database, and sends responses back to the frontend.
-Frontend updates the user interface based on the received data.
+    Users log in to the system based on their roles (strictly Admin).
+    Frontend sends requests to the backend via RESTful APIs.
+    Backend processes requests, communicates with the database, and sends responses back to the frontend.
+    Frontend updates the user interface based on the received data.
 
 Tech Stack and Frameworks
 Frontend
-HTML5, CSS3, JavaScript: For creating the user interface.
+    HTML5, CSS3, JavaScript: For creating the user interface.
 Framework: Vanila Frontend.
 
 Backend
-Programming Language: Node.js
-Framework: Express.js
-Database: MongoDB 
-Authentication: JSON Web Tokens (JWT)
+    Programming Language: Node.js
+    Framework: Express.js
+    Database: MongoDB 
+    Authentication: JSON Web Tokens (JWT)
